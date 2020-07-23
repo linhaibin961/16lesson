@@ -25,7 +25,7 @@ public class RawTypeTest3
 		//遍历intList集合的每个元素
 		for (int i = 0 ; i < intList.size() ; i++)
 		{
-			String in = intList.get(i);
+			Integer in = intList.get(i);
 			System.out.println(in);
 		}
 	}

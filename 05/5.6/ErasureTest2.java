@@ -10,13 +10,13 @@ import java.util.*;
  * @author  Yeeku.H.Lee kongyeeku@163.com
  * @version  1.0
  */
-class Apple<T extends Number>
+class Apple2<T extends Number>
 {
 	T size;
-	public Apple()
+	public Apple2()
 	{
 	}
-	public Apple(T size)
+	public Apple2(T size)
 	{
 		this.size = size;
 	}
@@ -33,7 +33,7 @@ class Apple<T extends Number>
 		List<String> list = new ArrayList<String>();
 		for (int i = 0; i < 3 ; i++ )
 		{
-			list.add(new Apple<Integer>(10 * i).toString());
+			list.add(new Apple2<Integer>(10 * i).toString());
 		}
 		return list;
 	}
@@ -46,7 +46,7 @@ public class ErasureTest2
 {
 	public static void main(String[] args)
 	{
-		Apple<Integer> a = new Apple<Integer>(6);
+		Apple2<Integer> a = new Apple2<Integer>(6);
 		for (String apple : a.getApples() )
 		{
 			System.out.println(apple);
@@ -55,8 +55,8 @@ public class ErasureTest2
 		//系统将擦除所有泛型信息，也就是擦除所有尖括号里的信息
 		//也就是说b对象调用getAppleSizes()方法不再返回List<String>，
 		//而是返回List
-		Apple b = a;                  //①
-		for (String apple : b.getApples() )
+		Apple2 b = a;                  //①
+		for (Object apple : b.getApples() )
 		{
 			System.out.println(apple);
 		}

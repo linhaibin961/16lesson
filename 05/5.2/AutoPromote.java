@@ -18,7 +18,7 @@ public class AutoPromote
 		short sValue = 5;
 		//表达式中的sValue将自动提升到int类型，则右边的表达式类型为int
 		//将一个int类型赋给short类型的变量将发生错误。
-		sValue = sValue - 2;
+		sValue = (short) (sValue - 2);
 		byte b = 40;
 		char c = 'a';
 		int i = 23;

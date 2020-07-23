@@ -14,7 +14,7 @@ public class CommentError
 {
 	public static void main(String[] args) 
 	{
-		//\u000a代表一个换行符
+		//代表一个换行符
 		char c = 0x000a;
 		System.out.println(c);
 	}

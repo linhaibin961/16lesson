@@ -33,11 +33,11 @@ public class ErasureTest
 {
 	public static void main(String[] args)
 	{
-		Apple<Integer> a = new Apple<Integer>(6);    //①
+		Apple2<Integer> a = new Apple2<Integer>(6);    //①
 		//a的getSize方法返回Integer对象
 		Integer as = a.getSize();
 		//把a对象赋给Apple变量，会丢失尖括号里的类型信息
-		Apple b = a;               //②
+		Apple2 b = a;               //②
 		//b只知道size的类型是Number
 		Number size1 = b.getSize();
 		//下面代码引起编译错误

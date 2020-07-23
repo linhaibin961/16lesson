@@ -26,8 +26,9 @@ public class StaticThreadInit2
 		t.start();
 	}
 	//定义一个静态field
-	final static String website;
-	public static void main(String[] args) 
+//	final static String website;
+	static String website;
+	public static void main(String[] args)
 	{
 		System.out.println(StaticThreadInit.website);
 	}

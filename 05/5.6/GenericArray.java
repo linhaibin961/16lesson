@@ -19,6 +19,6 @@ public class GenericArray<T>
 	public GenericArray()
 	{
 		//试图创建内部类A的数组
-		A[] as = new A[10];
+//		A[] as = new A[10];
 	}
 }
